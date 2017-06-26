@@ -1,5 +1,4 @@
 
-
 let username = document.getElementById('username');
 
 
@@ -15,8 +14,8 @@ function getRandomNumber(min, max) {
 
 const RandomNumber = getRandomNumber(0, names.length); // => this const will contain the random number
 
-object.onclick = function showMyfriend()
+function showMyfriend()
 {
- console.log(RandomNumber);
+ console.log([RandomNumber]);
 console.log(username);
 }
