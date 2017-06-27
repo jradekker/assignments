@@ -1,21 +1,17 @@
 
-let username = document.getElementById('username');
-
 
 const names = ["Anne", "Jim", "Monique", "Hanneke", "Peter", "Mathilde", "Bastiaan", "Maurits", "Machteld"];
-names.length;
-names[names.length];
-names[names.length - 1];
 
 
-function getRandomNumber(min, max) {
-  return Math.random() * (max - min) + min;
+
+function showMyfriend() {
+  const rNumber = getRandomNumber(0, names.length - 1);
+  const answerBox = document.getElementById('answer');
+  const name = document.getElementById('username').value;
+
+  answerBox.innerHTML = 'Hello, your name is ' + name + ', you are paired with ' + names[rNumber];
 }
 
-const RandomNumber = getRandomNumber(0, names.length); // => this const will contain the random number
-
-function showMyfriend()
-{
- console.log([RandomNumber]);
-console.log(username);
+function getRandomNumber(min, max) {
+  return Math.round(Math.random() * (max - min)) + min;
 }
